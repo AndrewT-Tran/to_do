@@ -22,7 +22,7 @@ function ToDoList() {
   };
 
   const handleTaskRemove = (index) => {
-    setTasks([...tasks.slice(0, index), ...tasks.slice(index + 1)]);
+    setTasks(tasks.filter((task, i) => i !== index));
   };
 
   const handleTaskClick = (index) => {
